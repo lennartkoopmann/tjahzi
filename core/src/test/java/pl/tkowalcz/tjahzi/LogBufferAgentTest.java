@@ -15,7 +15,6 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
 class LogBufferAgentTest {
@@ -126,7 +125,7 @@ class LogBufferAgentTest {
         agent.doWork();
 
         // Then
-        verifyZeroInteractions(httpClient);
+        verifyNoInteractions(httpClient);
     }
 
     @Test
@@ -163,7 +162,7 @@ class LogBufferAgentTest {
         agent.doWork();
 
         // Then
-        verifyZeroInteractions(httpClient);
+        verifyNoInteractions(httpClient);
     }
 
     @Test
